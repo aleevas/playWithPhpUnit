@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use App\Calculator\Addition;
+use App\Calculator\Exceptions\NoOperandsException;
 
 class AdditionTest extends TestCase {
 
@@ -16,6 +17,12 @@ class AdditionTest extends TestCase {
     {
         $this->addition->setOperands([5, 10]);
         $this->assertEquals(15, $this->addition->calculate());
+    }
+
+  public function test_no_operands_given_throws_exception_when_calculating() {
+      $this->addition->setOperands();
+      $this->expectException(NoOperandsException::class);
+      $this->addition->calculate();
     }
 
 }
