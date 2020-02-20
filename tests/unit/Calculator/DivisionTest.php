@@ -19,13 +19,15 @@ class DivisionTest extends TestCase {
     $this->assertEquals(50, $this->division->calculate());
   }
 
-  public function test_no_operands_given_throws_exception_when_calculating() {
+  public function test_no_operands_given_throws_exception_when_calculating()
+  {
     $this->division->setOperands();
     $this->expectException(NoOperandsException::class);
     $this->division->calculate();
   }
 
-  public function test_remove_by_zero_operands() {
+  public function test_remove_by_zero_operands()
+  {
     $this->division->setOperands([100, 2, 0, 25]);
     $this->assertEquals(2, $this->division->calculate());
   }

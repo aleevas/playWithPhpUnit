@@ -2,6 +2,4 @@
 
 namespace App\Calculator\Exceptions;
 
-class NoOperandsException extends \Exception {
-
-}
+class NoOperandsException extends \Exception {}
