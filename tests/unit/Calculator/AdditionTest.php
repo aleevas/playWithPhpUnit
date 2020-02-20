@@ -19,10 +19,10 @@ class AdditionTest extends TestCase {
         $this->assertEquals(15, $this->addition->calculate());
     }
 
-  public function test_no_operands_given_throws_exception_when_calculating() {
-      $this->addition->setOperands();
-      $this->expectException(NoOperandsException::class);
-      $this->addition->calculate();
+    public function test_no_operands_given_throws_exception_when_calculating() {
+        $this->addition->setOperands();
+        $this->expectException(NoOperandsException::class);
+        $this->addition->calculate();
     }
 
 }
